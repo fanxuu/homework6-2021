@@ -3,7 +3,7 @@ body{
     padding: 0;
     font-family: Alegreya Sans SC, serif;
     font-size: 16pt; /* test for this! Make all sizes em or rem */
-    background-image: url('../images/concret_seamless.png');
+    background-image: url('../images/concrete_seamless.png');
     background-color: #f1f1f1;
   }
   
@@ -18,6 +18,7 @@ body{
   .nav_links{
     display: flex;
     flex-direction: column;
+    align-items: center
  
   }
 
@@ -70,10 +71,11 @@ body{
 
   .nav_item a{
     padding: 10px;
+    color: #0021f5
   }
   
   .nav_item a:hover, a:focus{
-    color: #50C7C7;
+    color: #0021f5;
     text-decoration: underline;
     -webkit-text-decoration-style: dotted;
             text-decoration-style: dotted;
@@ -192,6 +194,12 @@ body{
       z-index: -99;
     }
     
+    body>header{
+      position: sticky;
+      top: 0;
+      left: 0;
+    }
+
     header{
       flex-direction: row;
       justify-content: space-between;
@@ -223,14 +231,13 @@ body{
     .nav_links{
       flex-direction: row;
       align-items: baseline;
-      justify-content: space-around;
+      justify-content: space-evenly;
     }
 
     .pricing{
       flex-direction: row;
       flex-wrap: nowrap;
-      align-items: baseline;
-      max-height: 450px;
+      align-items: flex-end;
     }
 
     .card{
@@ -239,10 +246,18 @@ body{
     }
 
     #gallery{
-      visibility: hidden;
+      display: none;
     }
 
     .gallery{
-      visibility: hidden;
+      display: none;
+    }
+
+    .card>ul li:nth-child(odd)::before{
+      content:"\01f44d";
+    }
+
+    .card>ul li:nth-child(even)::after{
+      content:"\01f44d";
     }
   }
