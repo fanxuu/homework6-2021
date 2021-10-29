@@ -173,18 +173,11 @@ body{
     animation-duration: 5s;
   }
 
-  @media (prefers-reduced-motion) {
-    @keyframes logo{
-      from {
-        width: 425px;
-        opacity: 1;
-      }
-      to {
-        width: 425px;
-        opacity: 1;
-      }
+  @media screen and (prefers-reduced-motion: reduce) {
+    #logo {
+        animation-name: none;
     }
-  }
+}
  
 
   @media screen and (min-width: 850px){
